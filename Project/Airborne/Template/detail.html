@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+    {% block content %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{aircraft.image.url}}" width="600" height="250">
+                    </div>
+                    <div class="col-md-6">
+                    {{aircraft.name}}<br>
+                    {{aircraft.description}}<br>
+                    <a class="btn btn-warning" href="{% url 'Fly:update' aircraft.id %}">Update</a>
+                    <a class="btn btn-danger" href="{% url 'Fly:delete' aircraft.id %}">Delete</a>
+                    </div>
+                </div>
+            </div>
+    {% endblock %}
